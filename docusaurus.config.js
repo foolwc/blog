@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'foolwc的博客',
   tagline: 'foolwc的博客',
-  url: 'https://foolwc.github.com',
+  url: 'https://foolwc.github.io',
   baseUrl: '/blog/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
