@@ -13,7 +13,21 @@
         <link href="https://foolwc.github.io/blog/blog/sonar-cpp"/>
         <updated>2022-01-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[本文的使用SonarQube配置c/c++扫描插件，以及通过cppcheck扫描并上传扫描结果至SonarQube中。]]></summary>
-        <content type="html"><![CDATA[<p>本文的使用<strong>SonarQube</strong>配置c/c++扫描插件，以及通过<strong>cppcheck</strong>扫描并上传扫描结果至SonarQube中。</p><h2>准备环境</h2><ul><li>SonarQube社区版</li><li><a href="https://github.com/SonarOpenCommunity/sonar-cxx/releases/download/cxx-1.3.2/sonar-cxx-plugin-1.3.2.1853.jar">sonar-cxx-plugin</a> (<a href="https://github.com/SonarOpenCommunity/sonar-cxx/releases/download/cxx-1.3.2/sonar-cxx-plugin-1.3.2.1853.jar">https://github.com/SonarOpenCommunity/sonar-cxx/releases/download/cxx-1.3.2/sonar-cxx-plugin-1.3.2.1853.jar</a>)</li></ul>]]></content>
+        <content type="html"><![CDATA[<p>本文的使用<strong>SonarQube</strong>配置c/c++扫描插件，以及通过<strong>cppcheck</strong>扫描并上传扫描结果至SonarQube中。</p><h2>准备环境</h2><ul><li>SonarQube社区版(自行安装)</li><li><a href="https://github.com/SonarOpenCommunity/sonar-cxx">sonar-cxx-plugin</a></li><li><a href="https://github.com/danmar/cppcheck">cppcheck</a></li><li>cppcheck所需的nodejs环境（NodeJS 8+）</li></ul><h2>SonarQube安装插件</h2><p>进入sonar插件目录，将<code>.jar</code>文件拷贝至该目录下(或直接下载)：</p><pre><code class="language-shell" metastring="script">cd /opt/sonarqube-8.4.2.36762/extensions/plugins
+
+wget https://github.com/SonarOpenCommunity/sonar-cxx/releases/download/cxx-1.3.2/sonar-cxx-plugin-1.3.2.1853.jar
+
+chown sonar.sonar sonar-cxx-plugin-1.3.2.1853.jar
+</code></pre><p>下载完成后重启sonarqube。</p><h2>Sonar配置C++的代码扫描规则</h2><p>进入代码规则，点击<strong>创建</strong>
+<img src="./img/sonar-1.png" alt="step1"/>
+创建规则：
+<img src="./img/sonar-step2.png" alt="step2"/>
+将所有规则激活，并设置为默认（保证cpp为默认，并且规则数有很多）。
+<img src="./img/sonar-3.png" alt="step3"/></p><h2>扫描环境配置</h2><h3>采用命令的方式安装cppcheck</h3><pre><code class="language-bash">yum -y install cppcheck
+</code></pre><h3>jenkins流水线配置</h3><p>1、 执行cppcheck命令:</p><pre><code class="language-shell" metastring="script">cppcheck --enable=all --inconclusive --xml-version=2 ./ 2&gt; result.xml
+</code></pre><p>:::tip</p><p>注意不要删除里面的<strong>2</strong>，若删除，则输出的是程序运行过程日志，无法得到结果日志！</p><p>:::</p><p>2、执行sonar-scanner的扫描命令：
+（我直接在本地执行测试，直接扫了checkcpp的源码，指定了sonar.host地址）</p><pre><code class="language-shell" metastring="script">/opt/jenkins/sonar_scanner/bin/sonar-scanner -Dsonar.projectKey=cpp -Dsonar.projectName=cpp -Dsonar.sources=/opt/sonar/cppcheck-2.2 -Dsonar.language=c++ -Dsonar.cxx.cppcheck.reportPath=/opt/sonar/cppcheck-2.2/samples/result.xml -Dsonar.host.url=http://10.0.7.1:30939/ -Dsonar.projectBaseDir=./../
+</code></pre><h2>Sonar结果</h2><p><img src="./img/sonar-4.png" alt="result"/>  </p><p><img src="./img/sonar-5.png" alt="result"/></p>]]></content>
         <author>
             <name>李文成</name>
             <uri>https://github.com/foolwc</uri>
