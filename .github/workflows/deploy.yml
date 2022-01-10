@@ -17,7 +17,7 @@ jobs:
       - name: Build website
         working-directory: website
         run: |
-          npm install
+          npm ci
           npm run build
 
       # Popular action to deploy to GitHub Pages:
