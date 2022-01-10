@@ -12,6 +12,8 @@
         <id>sonar-cpp</id>
         <link href="https://foolwc.github.io/blog/blog/sonar-cpp"/>
         <updated>2022-01-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[本文的使用SonarQube配置c/c++扫描插件，以及通过cppcheck扫描并上传扫描结果至SonarQube中。]]></summary>
+        <content type="html"><![CDATA[<p>本文的使用<strong>SonarQube</strong>配置c/c++扫描插件，以及通过<strong>cppcheck</strong>扫描并上传扫描结果至SonarQube中。</p><h2>准备环境</h2><ul><li>SonarQube社区版</li><li><a href="https://github.com/SonarOpenCommunity/sonar-cxx/releases/download/cxx-1.3.2/sonar-cxx-plugin-1.3.2.1853.jar">sonar-cxx-plugin</a> (<a href="https://github.com/SonarOpenCommunity/sonar-cxx/releases/download/cxx-1.3.2/sonar-cxx-plugin-1.3.2.1853.jar">https://github.com/SonarOpenCommunity/sonar-cxx/releases/download/cxx-1.3.2/sonar-cxx-plugin-1.3.2.1853.jar</a>)</li></ul>]]></content>
         <author>
             <name>李文成</name>
             <uri>https://github.com/foolwc</uri>
