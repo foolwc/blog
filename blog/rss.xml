@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>foolwc的博客 Blog</title>
-        <link>https://foolwc.github.io/blog</link>
+        <link>https://foolwc.github.io/blog/blog</link>
         <description>foolwc的博客 Blog</description>
         <lastBuildDate>Mon, 10 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[SonarQube配置c/c++项目扫描]]></title>
-            <link>https://foolwc.github.io/blog/sonar-cpp</link>
+            <link>https://foolwc.github.io/blog/blog/sonar-cpp</link>
             <guid>sonar-cpp</guid>
             <pubDate>Mon, 10 Jan 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Welcome]]></title>
-            <link>https://foolwc.github.io/blog/welcome</link>
+            <link>https://foolwc.github.io/blog/blog/welcome</link>
             <guid>welcome</guid>
             <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></description>
@@ -23,7 +23,7 @@
         </item>
         <item>
             <title><![CDATA[MDX Blog Post]]></title>
-            <link>https://foolwc.github.io/blog/mdx-blog-post</link>
+            <link>https://foolwc.github.io/blog/blog/mdx-blog-post</link>
             <guid>mdx-blog-post</guid>
             <pubDate>Sun, 01 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></description>
@@ -32,7 +32,7 @@
         </item>
         <item>
             <title><![CDATA[Long Blog Post]]></title>
-            <link>https://foolwc.github.io/blog/long-blog-post</link>
+            <link>https://foolwc.github.io/blog/blog/long-blog-post</link>
             <guid>long-blog-post</guid>
             <pubDate>Wed, 29 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[This is the summary of a very long blog post,]]></description>
@@ -40,7 +40,7 @@
         </item>
         <item>
             <title><![CDATA[First Blog Post]]></title>
-            <link>https://foolwc.github.io/blog/first-blog-post</link>
+            <link>https://foolwc.github.io/blog/blog/first-blog-post</link>
             <guid>first-blog-post</guid>
             <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></description>
