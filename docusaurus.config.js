@@ -105,6 +105,25 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  themeConfig: {
+    // ...
+    algolia: {
+      // If Algolia did not provide you any appId, use 'BH4D9OD16A'
+      appId: 'HFP282SVI1',
+
+      // Public API key: it is safe to commit it
+      apiKey: 'c7d016b1ecba58322521545d04b1f7e1',
+
+      indexName: 'github_blog',
+
+      contextualSearch: true,
+
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      searchParameters: {},
+
+    },
+  },
 };
 
 module.exports = config;
