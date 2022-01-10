@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[744],{4138:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/sonarqube","name":"sonarqube","count":1,"permalink":"/blog/tags/sonarqube"}')}}]);
